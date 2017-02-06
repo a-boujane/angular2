@@ -4,7 +4,7 @@ import {Hero} from './hero';
     selector: 'my-hero-detail',
     template: `
     <div *ngIf="hero">
-    <h2>{{hero.name}} details!</h2>
+    <h2>{{hero.name}} MoFuggin details!</h2>
     <div><label>id: </label>{{hero.id}}</div>
     <div>
     <label>name: </label>
