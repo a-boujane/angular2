@@ -7,10 +7,15 @@ import { HEROES } from './mock-heroes'
 export class HeroService {
     getHeroes(): Promise<Hero[]> {
         return Promise.resolve(HEROES);
-     }
-     getHeroesSlowly(): Promise<Hero[]>{
-         return new Promise(resolve=>{
-             setTimeout(()=>resolve(this.getHeroes()),2000)
-         });
-     }
+    }
+    getHeroesSlowly(): Promise<Hero[]> {
+        return new Promise(resolve => {
+            setTimeout(() => resolve(this.getHeroes()), 2000)
+        });
+    }
+    getHero(id: number): Promise<Hero> {
+        console.log("executing Get Hero by ID: "+ id);
+        return this.getHeroes()
+            .then(heroes => heroes.find(hero=>hero.id===id));
+    }
 }
