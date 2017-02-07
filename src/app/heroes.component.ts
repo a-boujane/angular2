@@ -13,7 +13,7 @@ import { OnInit } from '@angular/core'
             <span class="badge">{{hero.id}}</span> {{hero.name}}
             </li>
         </ul>
-  `
+  `,
   styles: [`
   .selected {
     background-color: #CFA8DC !important;
